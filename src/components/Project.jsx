@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { projects, technologies } from "../constans";
 import github from "../assets/github.png";
-import { Link } from "react-router-dom";
 
 const CardProject = ({ project }) => {
   return (
@@ -36,12 +37,17 @@ const Project = () => {
   return (
     <div>
       <h2 className="text-lg text-white">Projectos</h2>
-
       <ul className="sm:flex sm:flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col gap-6">
         {projects?.map((project) => (
-          <li className="">
+          <motion.li
+            className=""
+            variants={textVariant()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.25 }}
+          >
             <CardProject project={project} />
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>
@@ -49,3 +55,20 @@ const Project = () => {
 };
 
 export default Project;
+const textVariant = (delay) => {
+  return {
+    hidden: {
+      x: -50,
+      opacity: 0,
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1.25,
+        delay: 0.2,
+      },
+    },
+  };
+};

@@ -6,15 +6,16 @@ import About from "./components/About";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import { img } from "./assets";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <Navbar />
-        <section className="mx-auto min-h-screen px-12 max-w-screen-xl lg:px-20">
+        <section className="mx-auto min-h-screen px-6 md:px-12 max-w-screen-xl lg:px-20">
           <div className="lg:flex lg:justify-between lg:gap-4 ">
-            <aside className="lg:sticky lg:top-0 py-20 lg:flex lg:flex-col lg:justify-between lg:max-h-screen lg:w-1/2 lg:py-24">
+            <section className="lg:sticky lg:top-0 pt-20  md:py-20 lg:flex lg:flex-col lg:justify-between lg:max-h-screen lg:w-1/2 lg:py-24">
               <div>
                 <Hero />
 
@@ -28,10 +29,12 @@ function App() {
                   </li>
                 ))}
               </ul>
-            </aside>
+            </section>
 
             <main className="flex flex-col pt-24 lg:w-1/2 lg:py-24">
               <Project />
+
+              <Contact />
             </main>
           </div>
         </section>

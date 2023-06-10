@@ -21,11 +21,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className={`w-full flex items-center p-3 fixed top-0 z-20 border-2     border-primary border-b-zinc-900  ${
-        scrolled ? "bg-primary" : "bg-transparent"
-      } `}
-    >
+    <header className="w-full flex items-center p-3 fixed top-0 z-20 border-2  bg-primary   border-primary border-b-zinc-900">
       <div className="w-full  max-w-screen-xl m-auto flex justify-between items-center">
         <Link
           to="/"
@@ -59,21 +55,27 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="w-[28px] h-[28px] object-contain bg-white"
             onClick={() => setToggle(!toggle)}
           />
 
           <nav
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-black flex flex-row border border-black border-l-secondary justify-center black-gradient absolute top-0 right-0 w-1/2 h-screen max-h-[900px] max-w-[500px] z-10`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <img
+              src={toggle ? close : menu}
+              alt="menu"
+              className="absolute top-2 right-2 w-[28px] h-[28px] object-contain bg-white "
+              onClick={() => setToggle(!toggle)}
+            />
+            <ul className="list-none flex  items-start flex-1 flex-col gap-4 my-7">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] hover:text-white ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-poppins font-medium cursor-pointer text-lg hover:text-secondary ${
+                    active === nav.title ? "text-secondary" : "text-white"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
