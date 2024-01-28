@@ -1,19 +1,23 @@
 import React from "react";
 import { styles } from "../style";
-import perfil from "../assets/perfil2.jpeg";
+
 import Skill from "./Skill";
 import { technologies } from "../constans";
-
+import perfil from "../assets/perfil.jpeg";
 const Hero = () => {
   return (
-    <section className="flex gap-2">
-      <div>
-        <h1 className="text-5xl font-bold">Pablo Sierra</h1>
-        <h3 className="text-lg font-medium mt-2">
-          Desarrollador Web Fullstack
-        </h3>
+    <section className="flex  gap-2 mb-2">
+      <div className="flex flex-col">
+        <img src={perfil} alt="" className=" w-16 rounded-full" />
 
-        <Skill technologies={technologies} />
+        <div className=" mt-2">
+          <h1 className="text-[38px] font-bold text-opacity-10">
+            Soy <span className=" text-secondary">Pablo Sierra.</span>
+          </h1>
+          <h3 className=" text-md font-semibold ">
+            Desarrollador Web Fullstack
+          </h3>
+        </div>
       </div>
     </section>
   );

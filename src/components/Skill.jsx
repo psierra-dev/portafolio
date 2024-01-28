@@ -1,6 +1,7 @@
 import React from "react";
 import { styles } from "../style";
 import { motion } from "framer-motion";
+import ScrollAutomatic from "./scroll-automatic/ScrollAutomatic";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -14,33 +15,29 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
 const Skill = ({ technologies, size = "10" }) => {
   return (
-    <section className="w-full mt-10">
-      <motion.ul
-        className="container flex flex-row flex-wrap  gap-3"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
+    <div className="container-slide mt-4">
+      <div className="slide">
         {technologies.map((t, index) => (
-          <motion.li key={t.name + index} variants={item} className="item">
-            <div
-              className={`w-8 h-8 rounded-full p-1 bg-white hover:scale-110`}
-            >
-              <img src={t.icon} alt="" className="w-full h-full" />
-            </div>
-          </motion.li>
+          <div
+            className={`w-6 h-6 m-2 rounded-full p-1 bg-gray-200 hover:scale-110`}
+          >
+            <img src={t.icon} alt="" className="w-full h-full" />
+          </div>
         ))}
-      </motion.ul>
-    </section>
+      </div>
+
+      <div className="slide">
+        {technologies.map((t, index) => (
+          <div
+            className={`w-6 h-6 m-2 rounded-full p-1 bg-gray-200 hover:scale-110`}
+          >
+            <img src={t.icon} alt="" className="w-full h-full" />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

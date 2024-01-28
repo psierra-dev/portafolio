@@ -1,6 +1,6 @@
 import { img } from "../assets/index";
 const { tecnologias, projectsImg } = img;
-
+import pruebaProject from "../assets/Projects/prueba.png";
 const {
   html,
   css,
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 1,
     nombre: "Kiosko-app",
-    img: perfil,
+    img: pruebaProject,
     descripcion:
       "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
     technologies: technologies
@@ -104,7 +104,7 @@ export const projects = [
   {
     id: 2,
     nombre: "Autoservice-app",
-    img: perfil,
+    img: pruebaProject,
     descripcion:
       "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
     technologies: technologies
@@ -119,7 +119,7 @@ export const projects = [
   {
     id: 3,
     nombre: "Autoservice-app",
-    img: perfil,
+    img: pruebaProject,
     descripcion:
       "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
     technologies: technologies
@@ -134,6 +134,7 @@ export const projects = [
   {
     id: 4,
     nombre: "Autoservice-app",
+    img: pruebaProject,
     descripcion:
       "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
     technologies: technologies
@@ -148,6 +149,7 @@ export const projects = [
   {
     id: 4,
     nombre: "Autoservice-app",
+    img: pruebaProject,
     descripcion:
       "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
     technologies: technologies

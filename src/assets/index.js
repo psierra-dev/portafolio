@@ -14,7 +14,8 @@ import postgres from "./Tech/postgres.png";
 import express from "./Tech/express.png";
 import nodejs from "./Tech/nodejs.png";
 
-import perfil from "./Projects/perfil.jpeg";
+import proyect from "./Projects/perfil.jpeg";
+import perfil from "./perfil.jpeg";
 export const img = {
   tecnologias: {
     html,
@@ -35,7 +36,8 @@ export const img = {
     github,
   },
   projectsImg: {
-    perfil,
+    proyect,
   },
   iconRed: [github, linkedin],
+  perfil: perfil,
 };
