@@ -18,19 +18,19 @@ const { perfil } = projectsImg;
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "Acerca",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Proyectos",
   },
   {
     id: "skill",
-    title: "Skill",
+    title: "Habilidades",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contacto",
   },
 ];
 

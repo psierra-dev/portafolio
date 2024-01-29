@@ -1,28 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import Skill from "./Skill";
-import { projects, technologies } from "../constans";
-import github from "../assets/github.png";
+
+import { projects } from "../constans";
+
+import { FiLink } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 
 const CardProject = ({ project }) => {
   return (
-    <div className="relative text-center   rounded-xl  hover:bg-slate-600 gap-3">
-      <div className="w-full h-auto bg-[#202E4B] rounded-xl">
+    <div className="relative rounded-xl p-4 border-[1px] border-gray-600  gap-3">
+      <div className="w-full h-[200px] md:h-[250px]  bg-[#202E4B] rounded-xl">
         <img
-          className="w-full h-auto rounded-xl"
+          className="w-full h-full rounded-xl object-cover"
           src={project?.img}
-          alt=""
+          alt="image of project"
           width="384"
           height="512"
         />
       </div>
 
-      <div className="flex w-full p-2">
-        <h2 className="text-lg m-0 w-fit">{project?.nombre}</h2>
+      <div className="flex justify-between items-center w-full my-2">
+        <Link>
+          <div className="flex items-center hover:text-secondary">
+            <h2 className="text-md font-semibold m-0 w-fit">
+              {project?.nombre}
+            </h2>
+            <span className="">
+              <FiLink />
+            </span>
+          </div>
+        </Link>
+
+        <Link>
+          <span className="hover:text-secondary text-md">
+            <FaGithub />
+          </span>
+        </Link>
       </div>
-      <div className="p-2">
+      <div className="">
         <p className="text-md font-medium">{project?.descripcion}</p>
+      </div>
+
+      <div className="flex gap-2 mt-2">
+        {project.technologies.map((t) => (
+          <div className="w-6 h-6 bg-white rounded-full p-1">
+            <img className="w-full h-full" src={t.icon} alt="tech" />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -34,15 +58,9 @@ const Project = () => {
       <h2 className="text-lg text-white mb-2">Proyectos</h2>
       <ul className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col gap-6">
         {projects?.map((project) => (
-          <motion.li
-            className=""
-            variants={textVariant()}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-          >
+          <li className="">
             <CardProject project={project} />
-          </motion.li>
+          </li>
         ))}
       </ul>
     </div>
@@ -50,20 +68,3 @@ const Project = () => {
 };
 
 export default Project;
-const textVariant = (delay) => {
-  return {
-    hidden: {
-      x: -50,
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration: 1.25,
-        delay: 0.2,
-      },
-    },
-  };
-};
