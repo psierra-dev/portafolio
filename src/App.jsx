@@ -38,7 +38,7 @@ function App() {
           </div>
         </main>
 
-        <footer className="p-2 md:hidden">
+        <footer className="p-2 md:hidden w-full flex justify-center">
           <small>Pablo Sierra</small>
         </footer>
       </div>

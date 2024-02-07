@@ -8,7 +8,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="w-full flex items-center py-3 md:px-12 lg:px-20 fixed top-0 z-20 border-2  bg-primary   border-primary border-b-zinc-900">
+    <header className="w-full flex items-center py-3 md:px-12 px-1 lg:px-20 fixed top-0 z-20 border-2  bg-primary   border-primary border-b-zinc-900">
       <div className="mx-auto max-w-screen-xl w-full   flex justify-between md:justify-center items-center">
         <Link
           to="/"
@@ -19,7 +19,7 @@ const Navbar = () => {
           }}
         >
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Pablo Sierra &nbsp;
+            PS &nbsp;
             <span className="sm:block hidden"> | FullStack</span>
           </p>
         </Link>

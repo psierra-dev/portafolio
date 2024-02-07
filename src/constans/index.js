@@ -1,6 +1,6 @@
 import { img } from "../assets/index";
 const { tecnologias, projectsImg } = img;
-import pruebaProject from "../assets/Projects/prueba.png";
+import pruebaProject from "../assets/Projects/screet-inicio3.png";
 const {
   html,
   css,
@@ -12,9 +12,13 @@ const {
   typescript,
   nodejs,
   git,
+  nextjs,
+  sequelize,
+  supabase,
+  firebase,
 } = tecnologias;
 
-const { perfil } = projectsImg;
+const { marketplace, translated, redsocial } = projectsImg;
 export const navLinks = [
   {
     id: "about",
@@ -48,16 +52,36 @@ export const technologies = [
     icon: javascript,
   },
   {
+    name: "typescript",
+    icon: typescript,
+  },
+  {
     name: "reactjs",
     icon: reactjs,
+  },
+  {
+    name: "nextjs",
+    icon: nextjs,
   },
   {
     name: "nodejs",
     icon: nodejs,
   },
   {
+    name: "sequelize",
+    icon: sequelize,
+  },
+  {
     name: "postgres",
     icon: postgres,
+  },
+  {
+    name: "supabase",
+    icon: supabase,
+  },
+  {
+    name: "firebase",
+    icon: firebase,
   },
   {
     name: "express",
@@ -68,18 +92,6 @@ export const technologies = [
     icon: tailwind,
   },
   {
-    name: "typescript",
-    icon: typescript,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
     name: "git",
     icon: git,
   },
@@ -88,77 +100,79 @@ export const technologies = [
 export const projects = [
   {
     id: 1,
-    nombre: "Kiosko-app",
-    img: pruebaProject,
+    nombre: "Kiosko App",
+    img: marketplace,
     descripcion:
-      "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
+      "El proyecto consiste en desarrollar un Marketplace de comercio electrónico que conecta a clientes con vendedores para la compra y venta de productos. La plataforma ofrecerá una interfaz intuitiva y atractiva tanto para los compradores como para los vendedores, facilitando así la interacción y transacción entre ambas partes.",
     technologies: technologies
       .map((t) => {
-        if (t.name === "reactjs" || t.name === "git") {
+        const name = t.name;
+        if (
+          (name === "html" || name === "css",
+          name === "reactjs" ||
+            name === "nextjs" ||
+            name === "typescript" ||
+            name === "nodejs" ||
+            name === "postgres" ||
+            name === "express" ||
+            name === "sequelize")
+        ) {
           return t;
         }
         return false;
       })
       .filter((t) => t !== false),
+    link_web: "https://kisko-app.vercel.app",
+    link_github: "https://github.com/PabloSA57/kiosko-app",
   },
   {
     id: 2,
-    nombre: "Autoservice-app",
-    img: pruebaProject,
+    nombre: "Red Social",
+    img: redsocial,
     descripcion:
-      "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
+      "El proyecto consiste en el desarrollo de una plataforma de redes sociales que permite a los usuarios conectarse, interactuar y compartir contenido entre sí. Esta red social proporcionará una experiencia dinámica y personalizada para los usuarios, fomentando la comunicación, la colaboración y el intercambio de ideas.",
     technologies: technologies
       .map((t) => {
-        if (t.name === "reactjs" || t.name === "git") {
+        const name = t.name;
+        if (
+          name === "html" ||
+          name === "css" ||
+          name === "tailwind" ||
+          name === "reactjs" ||
+          name === "nextjs" ||
+          name === "typescript" ||
+          name === "supabase"
+        ) {
           return t;
         }
         return false;
       })
       .filter((t) => t !== false),
+    link_web: "https://red-social-sigma.vercel.app",
+    link_github: "https://github.com/PabloSA57/red-social",
   },
   {
     id: 3,
-    nombre: "Autoservice-app",
-    img: pruebaProject,
+    nombre: "Translated",
+    img: translated,
     descripcion:
-      "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
+      "El proyecto consiste en desarrollar una plataforma de traducción en línea que facilite la traducción de texto entre diferentes idiomas de manera rápida, precisa y confiable. Esta plataforma proporcionará herramientas avanzadas de traducción para satisfacer las necesidades de usuarios individuales, empresas y organizaciones que requieran servicios de traducción.",
     technologies: technologies
       .map((t) => {
-        if (t.name === "reactjs" || t.name === "git") {
+        const name = t.name;
+        if (
+          name === "html" ||
+          name === "css" ||
+          name === "tailwind" ||
+          name === "reactjs" ||
+          name === "javascript"
+        ) {
           return t;
         }
         return false;
       })
       .filter((t) => t !== false),
-  },
-  {
-    id: 4,
-    nombre: "Autoservice-app",
-    img: pruebaProject,
-    descripcion:
-      "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
-    technologies: technologies
-      .map((t) => {
-        if (t.name === "reactjs" || t.name === "git") {
-          return t;
-        }
-        return false;
-      })
-      .filter((t) => t !== false),
-  },
-  {
-    id: 4,
-    nombre: "Autoservice-app",
-    img: pruebaProject,
-    descripcion:
-      "loren sdksopdks dodsdsdlmslmdls skdsd sdkmskldks d,.smdksd smdksdopsdmaksd sdospkdoKmkm a sodksdk",
-    technologies: technologies
-      .map((t) => {
-        if (t.name === "reactjs" || t.name === "git") {
-          return t;
-        }
-        return false;
-      })
-      .filter((t) => t !== false),
+    link_web: "https://translated-webapp.vercel.app",
+    link_github: "https://github.com/PabloSA57/translated-webapp",
   },
 ];

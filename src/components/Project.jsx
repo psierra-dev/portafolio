@@ -8,10 +8,10 @@ import { FaGithub } from "react-icons/fa";
 
 const CardProject = ({ project }) => {
   return (
-    <div className="relative rounded-xl p-4 border-[1px] border-gray-600  gap-3">
-      <div className="w-full h-[200px] md:h-[250px]  bg-[#202E4B] rounded-xl">
+    <figure className="relative rounded-xl md:p-4   gap-3">
+      <div className="w-full  h-auto  overflow-x-auto  flex justify-center  rounded-xl">
         <img
-          className="w-full h-full rounded-xl object-cover"
+          className="w-full h-full rounded-xl "
           src={project?.img}
           alt="image of project"
           width="384"
@@ -19,8 +19,8 @@ const CardProject = ({ project }) => {
         />
       </div>
 
-      <div className="flex justify-between items-center w-full my-2">
-        <Link>
+      <div className="flex justify-between items-center w-full my-1">
+        <Link to={project.link_web} target="_blank">
           <div className="flex items-center hover:text-secondary">
             <h2 className="text-md font-semibold m-0 w-fit">
               {project?.nombre}
@@ -31,14 +31,16 @@ const CardProject = ({ project }) => {
           </div>
         </Link>
 
-        <Link>
+        <Link to={project.link_github} target="_blank">
           <span className="hover:text-secondary text-md">
             <FaGithub />
           </span>
         </Link>
       </div>
       <div className="">
-        <p className="text-md font-medium">{project?.descripcion}</p>
+        <p className="text-sm font-medium text-gray-400">
+          {project?.descripcion}
+        </p>
       </div>
 
       <div className="flex gap-2 mt-2">
@@ -48,7 +50,7 @@ const CardProject = ({ project }) => {
           </div>
         ))}
       </div>
-    </div>
+    </figure>
   );
 };
 
