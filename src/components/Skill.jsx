@@ -4,7 +4,7 @@ const Skill = ({ technologies, size = "10" }) => {
   return (
     <div className="container-slide mt-4">
       <div className="slide">
-        {technologies.map((t, index) => (
+        {technologies.map((t) => (
           <div
             className={`w-6 h-6 m-2 rounded-full p-1 bg-gray-200 hover:scale-110`}
           >
@@ -14,7 +14,7 @@ const Skill = ({ technologies, size = "10" }) => {
       </div>
 
       <div className="slide">
-        {technologies.map((t, index) => (
+        {technologies.map((t) => (
           <div
             className={`w-6 h-6 m-2 rounded-full p-1 bg-gray-200 hover:scale-110`}
           >

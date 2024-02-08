@@ -1,7 +1,5 @@
 import menu from "./menu.svg";
 import close from "./close.svg";
-import github from "./github.png";
-import linkedin from "./linkedin.png";
 import html from "./Tech/html.png";
 import css from "./Tech/css.png";
 import git from "./Tech/git.png";
@@ -44,7 +42,6 @@ export const img = {
   icon: {
     menu,
     close,
-    github,
   },
   projectsImg: {
     proyect,
@@ -52,6 +49,5 @@ export const img = {
     translated,
     redsocial,
   },
-  iconRed: [github, linkedin],
   perfil: perfil,
 };
