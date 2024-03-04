@@ -18,7 +18,7 @@ const {
   firebase,
 } = tecnologias;
 
-const { marketplace, translated, redsocial } = projectsImg;
+const { marketplace, translated, redsocial, presupuesto } = projectsImg;
 export const navLinks = [
   {
     id: "about",
@@ -127,6 +127,30 @@ export const projects = [
   },
   {
     id: 2,
+    nombre: "Presupuesto",
+    img: presupuesto,
+    descripcion:
+      "Es una aplicación web intuitiva y completa que te permite crear, gestionar y controlar presupuestos para tus proyectos de construcción de forma eficiente.",
+    technologies: technologies
+      .map((t) => {
+        const name = t.name;
+        if (
+          (name === "html" || name === "css",
+          name === "reactjs" ||
+            name === "nextjs" ||
+            name === "typescript" ||
+            name === "supabase")
+        ) {
+          return t;
+        }
+        return false;
+      })
+      .filter((t) => t !== false),
+    link_web: "https://presupuesto-web-one.vercel.app",
+    link_github: "https://github.com/PabloSA57/presupuesto-web",
+  },
+  {
+    id: 3,
     nombre: "Red Social",
     img: redsocial,
     descripcion:
@@ -152,7 +176,7 @@ export const projects = [
     link_github: "https://github.com/PabloSA57/red-social",
   },
   {
-    id: 3,
+    id: 4,
     nombre: "Translated",
     img: translated,
     descripcion:

@@ -20,6 +20,7 @@ import proyect from "./Projects/perfil.jpeg";
 import marketplace from "./Projects/screet-inicio3.png";
 import translated from "./Projects/translated1.png";
 import redsocial from "./Projects/red-social.png";
+import presupuesto from "./Projects/presupuesto.png";
 import perfil from "./perfil.jpeg";
 export const img = {
   tecnologias: {
@@ -48,6 +49,7 @@ export const img = {
     marketplace,
     translated,
     redsocial,
+    presupuesto,
   },
   perfil: perfil,
 };
