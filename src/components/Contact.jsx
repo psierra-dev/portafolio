@@ -48,15 +48,14 @@ const Contact = () => {
   };
 
   return (
-    <div class="flex w-full flex-col justify-center px-2 md:px-6 py-12 lg:px-8">
+    <div class="flex w-full flex-col gap-4 justify-center">
       <h2 className="text-lg text-white">Contacto</h2>
-      <div className="">
-        <h2 className="mt-10 text-center text-lg font-semibold leading-9 tracking-tight text-gray-300 ">
-          Dejame tu mensaje
-        </h2>
-      </div>
 
-      <div className="w-full flex justify-center">
+
+      <div className="w-full flex flex-col items-center justify-center  px-2 md:px-6  lg:px-8">
+        <h3 className="text-center text-lg font-medium leading-9 tracking-tight text-gray-300 ">
+          Dejame tu mensaje
+        </h3>
         <form
           className="space-y-6 w-full max-w-[500px]"
           onSubmit={handleSubmit}
@@ -77,7 +76,7 @@ const Contact = () => {
                 required
                 value={data.email}
                 onChange={handleChange}
-                className="block w-full rounded-md border-0 py-1.5 px-1 text-gray-100 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+                className="block w-full px-2 rounded-md border-0 py-1.5 px-1 text-gray-100 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -100,7 +99,7 @@ const Contact = () => {
                 type=""
                 autocomplete="current-text"
                 required
-                className="block w-full rounded-md border-0 p-1.5 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                className="block w-full  rounded-md border-0 px-2 py-1.5 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
               />
             </div>
           </div>

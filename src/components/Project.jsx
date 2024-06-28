@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 
 const CardProject = ({ project }) => {
   return (
-    <figure className="relative rounded-xl md:p-4   gap-3">
+    <figure className="relative rounded-xl p-2 md:p-4 bg-[#080808]   gap-3">
       <div className="w-full  h-auto  overflow-x-auto  flex justify-center  rounded-xl">
         <img
           className="w-full h-full rounded-xl "
@@ -22,7 +22,7 @@ const CardProject = ({ project }) => {
       <div className="flex justify-between items-center w-full my-1">
         <Link to={project.link_web} target="_blank">
           <div className="flex items-center hover:text-secondary">
-            <h2 className="text-md font-semibold m-0 w-fit">
+            <h2 className="text-sm font-semibold m-0 w-fit">
               {project?.nombre}
             </h2>
             <span className="">
@@ -37,15 +37,10 @@ const CardProject = ({ project }) => {
           </span>
         </Link>
       </div>
-      <div className="">
-        <p className="text-sm font-medium text-gray-400">
-          {project?.descripcion}
-        </p>
-      </div>
 
       <div className="flex gap-2 mt-2">
         {project.technologies.map((t) => (
-          <div className="w-6 h-6 bg-white rounded-full p-1">
+          <div className="w-6 h-6 bg-neutral-800 rounded-full p-1">
             <img className="w-full h-full" src={t.icon} alt="tech" />
           </div>
         ))}
@@ -56,9 +51,9 @@ const CardProject = ({ project }) => {
 
 const Project = () => {
   return (
-    <div>
-      <h2 className="text-lg text-white mb-2">Proyectos</h2>
-      <ul className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-col gap-6">
+    <div className="flex flex-col gap-4" id="projects">
+      <h2 className="text-lg text-white">Proyectos</h2>
+      <ul className="container_project">
         {projects?.map((project) => (
           <li className="">
             <CardProject project={project} />

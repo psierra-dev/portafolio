@@ -44,10 +44,22 @@
 
 .container-slide:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(18, 18, 18));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
 }
 
 .container-slide:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(18, 18, 18));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+.container_project {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  gap: 15px;
 }

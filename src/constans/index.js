@@ -16,16 +16,17 @@ const {
   sequelize,
   supabase,
   firebase,
+  mongodb
 } = tecnologias;
 
-const { marketplace, translated, redsocial, presupuesto } = projectsImg;
+const { marketplace, translated, redsocial, presupuesto, chat } = projectsImg;
 export const navLinks = [
   {
     id: "about",
     title: "Acerca",
   },
   {
-    id: "work",
+    id: "projects",
     title: "Proyectos",
   },
   {
@@ -95,6 +96,10 @@ export const technologies = [
     name: "git",
     icon: git,
   },
+  {
+    name: "mongodb",
+    icon: mongodb
+  }
 ];
 
 export const projects = [
@@ -135,8 +140,8 @@ export const projects = [
       .map((t) => {
         const name = t.name;
         if (
-          (name === "html" || name === "css",
-          name === "reactjs" ||
+          (
+            name === "reactjs" ||
             name === "nextjs" ||
             name === "typescript" ||
             name === "supabase")
@@ -159,8 +164,6 @@ export const projects = [
       .map((t) => {
         const name = t.name;
         if (
-          name === "html" ||
-          name === "css" ||
           name === "tailwind" ||
           name === "reactjs" ||
           name === "nextjs" ||
@@ -185,8 +188,6 @@ export const projects = [
       .map((t) => {
         const name = t.name;
         if (
-          name === "html" ||
-          name === "css" ||
           name === "tailwind" ||
           name === "reactjs" ||
           name === "javascript"
@@ -198,5 +199,29 @@ export const projects = [
       .filter((t) => t !== false),
     link_web: "https://translated-webapp.vercel.app",
     link_github: "https://github.com/PabloSA57/translated-webapp",
+  },
+  {
+    id: 5,
+    nombre: "Chat",
+    img: chat,
+    descripcion:
+      "El proyecto consiste en desarrollar una plataforma de traducción en línea que facilite la traducción de texto entre diferentes idiomas de manera rápida, precisa y confiable. Esta plataforma proporcionará herramientas avanzadas de traducción para satisfacer las necesidades de usuarios individuales, empresas y organizaciones que requieran servicios de traducción.",
+    technologies: technologies
+      .map((t) => {
+        const name = t.name;
+        if (
+          name === "reactjs" ||
+          name === "tailwind" ||
+          name === "typescript" ||
+          name === "nodejs" ||
+          name === "mongodb"
+        ) {
+          return t;
+        }
+        return false;
+      })
+      .filter((t) => t !== false),
+    link_web: "https://chat-taupe-three-84.vercel.app",
+    link_github: "https://github.com/PabloSA57/chat",
   },
 ];

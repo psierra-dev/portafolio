@@ -6,51 +6,46 @@ import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import { technologies } from "./constans";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-[#010101]">
         <Navbar />
-        <main className="mx-auto min-h-screen px-3 md:px-12 max-w-screen-xl lg:px-20">
-          <div className="lg:flex lg:justify-between lg:gap-6 ">
-            <section className="lg:sticky lg:top-0 pt-16 md:pt-20  md:py-20 lg:flex lg:flex-col lg:justify-between lg:max-h-screen lg:w-1/2 lg:py-24">
-              <div className=" flex flex-col h-full justify-center">
+        <main className="mx-auto min-h-screen px-3 flex flex-col gap-20 md:px-12 max-w-screen-xl lg:px-12 lg:grid lg:grid-cols-12 lg:gap-6">
+            <section className=" gap-4 lg:sticky lg:top-0 lg:col-span-6  pt-16 lg:pt-20  lg:py-20  lg:max-h-screen  lg:py-24">
                 <Hero />
-
-                <Skill technologies={technologies} />
-                <About />
-                <ul className="flex items-center gap-2 mt-10 ">
-                  <li>
-                    <Link to="https://github.com/PabloSA57" target="_blank">
-                      <span className="text-lg hover:text-secondary">
-                        <FaGithub />
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="https://www.linkedin.com/in/pablo-sierra-543aa220b/"
-                      target="_blank"
-                    >
-                      <span className="text-lg hover:text-secondary">
-                        <FaLinkedin />
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <span className="text-xs">Psierra472@gmail.com</span>
-                  </li>
-                </ul>
-              </div>
+               
             </section>
 
-            <section className="flex flex-col pt-24 lg:w-1/2 lg:py-24">
+            <section className="flex flex-col lg:pt-24 gap-20 lg:col-span-6 lg:py-24">
               <Project />
+
+              <section className="flex flex-col gap-4" id="skill">
+                <h2 className="text-lg text-white">Habilidades</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex flex-col w-full bg-[#080808]  p-3 rounded-md justify-center items-center gap-2">
+                  <span className="text-lg text-blue-400">Frontend</span>
+                  <p className="text-[14px] text-gray-200">Diseño responsivo y móvil primero</p>
+                </div>
+                <div className="flex flex-col bg-[#080808]  w-full   p-3 rounded-md justify-center items-center gap-2">
+                  <span className="text-lg text-blue-400">Backend</span>
+                  <p className="text-[14px] text-gray-200">Creación de APIs RESTful</p>
+                </div>
+                <div className="flex flex-col w-full bg-[#080808]  p-3 rounded-md justify-center items-center gap-2">
+                  <span className="text-lg text-blue-400">Ui/Ux</span>
+                  <p className="text-[14px] text-gray-200">Creacion de interfaces web</p>
+                </div>
+                <div className="flex flex-col w-full bg-[#080808]  p-3 rounded-md justify-center items-center gap-2">
+                  <span className="text-lg text-blue-400">DataBase</span>
+                  <p className="text-[14px] text-gray-200">Diseño y optimización</p>
+                </div>
+
+                </div>
+              </section>
               <Contact />
             </section>
-          </div>
         </main>
 
         <footer className="p-2 md:hidden w-full flex justify-center">

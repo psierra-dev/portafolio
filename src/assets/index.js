@@ -15,12 +15,14 @@ import nodejs from "./Tech/nodejs.png";
 import sequelize from "./Tech/sequelize.png";
 import supabase from "./Tech/supabase.png";
 import firebase from "./Tech/firebase.png";
+import mongodb from "./Tech/mongodb.png";
 
 import proyect from "./Projects/perfil.jpeg";
 import marketplace from "./Projects/screet-inicio3.png";
 import translated from "./Projects/translated1.png";
 import redsocial from "./Projects/red-social.png";
 import presupuesto from "./Projects/presupuesto.png";
+import chat from "./Projects/chat.png";
 import perfil from "./perfil.jpeg";
 export const img = {
   tecnologias: {
@@ -39,6 +41,7 @@ export const img = {
     sequelize,
     supabase,
     firebase,
+    mongodb
   },
   icon: {
     menu,
@@ -50,6 +53,7 @@ export const img = {
     translated,
     redsocial,
     presupuesto,
+    chat
   },
   perfil: perfil,
 };
