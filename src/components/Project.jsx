@@ -15,7 +15,7 @@ const CardProject = ({ project }) => {
           src={project?.img}
           alt="image of project"
           width="384"
-          height="512"
+          height="190"
         />
       </div>
 
