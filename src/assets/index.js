@@ -23,9 +23,12 @@ import translated from "./Projects/translated1.png";
 import redsocial from "./Projects/red-social.png";
 import presupuesto from "./Projects/presupuesto.png";
 import chat from "./Projects/chat.png";
+import blog from "./Projects/blog.png";
+import bookmark from "./Projects/bookmark.png";
+
 import perfil from "./perfil.jpeg";
 export const img = {
-  tecnologias: {
+  technologiesImg: {
     html,
     css,
     git,
@@ -41,7 +44,7 @@ export const img = {
     sequelize,
     supabase,
     firebase,
-    mongodb
+    mongodb,
   },
   icon: {
     menu,
@@ -53,7 +56,9 @@ export const img = {
     translated,
     redsocial,
     presupuesto,
-    chat
+    chat,
+    blog,
+    bookmark,
   },
   perfil: perfil,
 };

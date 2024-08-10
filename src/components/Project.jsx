@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-import { projects } from "../constans";
+import {projects} from "../consts";
 
-import { FiLink } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
+import {FiLink} from "react-icons/fi";
+import {FaGithub} from "react-icons/fa";
 
-const CardProject = ({ project }) => {
+const CardProject = ({project}) => {
   return (
-    <figure className="relative rounded-xl p-2 md:p-4 bg-[#080808]   gap-3">
+    <figure className="relative rounded-xl p-2 md:p-4 bg-[#060606]   gap-3">
       <div className="w-full  h-auto  overflow-x-auto  flex justify-center  rounded-xl">
         <img
           className="w-full h-full rounded-xl "

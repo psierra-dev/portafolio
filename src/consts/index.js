@@ -1,6 +1,6 @@
-import { img } from "../assets/index";
-const { tecnologias, projectsImg } = img;
-import pruebaProject from "../assets/Projects/screet-inicio3.png";
+import {img} from "../assets/index";
+const {technologiesImg, projectsImg} = img;
+
 const {
   html,
   css,
@@ -16,10 +16,12 @@ const {
   sequelize,
   supabase,
   firebase,
-  mongodb
-} = tecnologias;
+  mongodb,
+} = technologiesImg;
 
-const { marketplace, translated, redsocial, presupuesto, chat } = projectsImg;
+const {marketplace, translated, redsocial, presupuesto, chat, blog, bookmark} =
+  projectsImg;
+
 export const navLinks = [
   {
     id: "about",
@@ -98,8 +100,8 @@ export const technologies = [
   },
   {
     name: "mongodb",
-    icon: mongodb
-  }
+    icon: mongodb,
+  },
 ];
 
 export const projects = [
@@ -128,7 +130,7 @@ export const projects = [
       })
       .filter((t) => t !== false),
     link_web: "https://kisko-app.vercel.app",
-    link_github: "https://github.com/PabloSA57/kiosko-app",
+    link_github: "https://github.com/psierra-dev/kiosko-app",
   },
   {
     id: 2,
@@ -140,11 +142,10 @@ export const projects = [
       .map((t) => {
         const name = t.name;
         if (
-          (
-            name === "reactjs" ||
-            name === "nextjs" ||
-            name === "typescript" ||
-            name === "supabase")
+          name === "reactjs" ||
+          name === "nextjs" ||
+          name === "typescript" ||
+          name === "supabase"
         ) {
           return t;
         }
@@ -152,7 +153,7 @@ export const projects = [
       })
       .filter((t) => t !== false),
     link_web: "https://presupuesto-web-one.vercel.app",
-    link_github: "https://github.com/PabloSA57/presupuesto-web",
+    link_github: "https://github.com/psierra-dev/presupuesto-web",
   },
   {
     id: 3,
@@ -176,7 +177,7 @@ export const projects = [
       })
       .filter((t) => t !== false),
     link_web: "https://red-social-sigma.vercel.app",
-    link_github: "https://github.com/PabloSA57/red-social",
+    link_github: "https://github.com/psierra-dev/red-social",
   },
   {
     id: 4,
@@ -198,7 +199,7 @@ export const projects = [
       })
       .filter((t) => t !== false),
     link_web: "https://translated-webapp.vercel.app",
-    link_github: "https://github.com/PabloSA57/translated-webapp",
+    link_github: "https://github.com/psierra-dev/translated-webapp",
   },
   {
     id: 5,
@@ -222,6 +223,47 @@ export const projects = [
       })
       .filter((t) => t !== false),
     link_web: "https://chat-taupe-three-84.vercel.app",
-    link_github: "https://github.com/PabloSA57/chat",
+    link_github: "https://github.com/psierra-dev/chat",
+  },
+  {
+    id: 6,
+    nombre: "Blog",
+    img: blog,
+    descripcion:
+      "El proyecto consiste en desarrollar una plataforma de traducción en línea que facilite la traducción de texto entre diferentes idiomas de manera rápida, precisa y confiable. Esta plataforma proporcionará herramientas avanzadas de traducción para satisfacer las necesidades de usuarios individuales, empresas y organizaciones que requieran servicios de traducción.",
+    technologies: technologies
+      .map((t) => {
+        const name = t.name;
+        if (
+          name === "reactjs" ||
+          name === "tailwind" ||
+          name === "typescript" ||
+          name === "nodejs" ||
+          name === "mongodb"
+        ) {
+          return t;
+        }
+        return false;
+      })
+      .filter((t) => t !== false),
+    link_web: "https://blog-api-lxzw.onrender.com/",
+    link_github: "https://github.com/psierra-dev/blog-api",
+  },
+  {
+    id: 7,
+    nombre: "Bookmark",
+    img: bookmark,
+    descripcion: "",
+    technologies: technologies
+      .map((t) => {
+        const name = t.name;
+        if (name === "reactjs" || name === "html" || name === "css") {
+          return t;
+        }
+        return false;
+      })
+      .filter((t) => t !== false),
+    link_web: "https://bookmark-frontend-mentor-cat.vercel.app/",
+    link_github: "https://github.com/psierra-dev/Landing-Page",
   },
 ];

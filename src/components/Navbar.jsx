@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { navLinks } from "../constans";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
+import {navLinks} from "../consts";
 
-import { MdOutlineMenu, MdClose } from "react-icons/md";
+import {MdOutlineMenu, MdClose} from "react-icons/md";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="w-full flex items-center py-3 bg-[#000000] md:px-12 px-1 lg:px-20 fixed top-0 z-20 border-2 border-primary border-b-zinc-900">
+    <header className="w-full flex items-center py-3 bg-[#000000] md:px-12 px-1 lg:px-20 fixed top-0 z-20 border-b-2   border-b-[#070707]">
       <div className="mx-auto max-w-screen-xl w-full   flex justify-between  items-center">
         <Link
           to="/"
@@ -23,23 +23,22 @@ const Navbar = () => {
             <span className="sm:block hidden"> | FullStack</span>
           </p>
         </Link>
-          <nav>
-            <ul className="list-none hidden md:flex flex-row gap-10">
-              {navLinks.map((n) => (
-                <li
-                  key={n.id}
-                  className={`${
-                    active === n.title ? "text-secondary" : "text-white"
-                  } hover:text-secondary text-md font-medium cursor-pointer`}
-                  onClick={() => setActive(n.title)}
-                >
-                  <a href={`#${n.id}`}>{n.title}</a>
-                </li>
-              ))}
-            </ul>
+        <nav>
+          <ul className="list-none hidden md:flex flex-row gap-10">
+            {navLinks.map((n) => (
+              <li
+                key={n.id}
+                className={`${
+                  active === n.title ? "text-secondary" : "text-white"
+                } hover:text-secondary text-md font-medium cursor-pointer`}
+                onClick={() => setActive(n.title)}
+              >
+                <a href={`#${n.id}`}>{n.title}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          </nav>
-            
         <div className="md:hidden relative">
           <button
             className="text-white text-xl cursor-pointer"
